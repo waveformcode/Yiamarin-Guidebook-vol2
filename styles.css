@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: jura;
+  letter-spacing: 0.01rem;
+}
+
+/*==== NAVIGATION BAR ====*/
+.nav-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.nav-bar li a:hover {
+  background-color: rgb(42, 122, 212);
+  color: white;
+  border-radius: 20px;
+}
+#logo {
+  max-width: 85px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100px;
+  margin: 0 20px;
+}
+
+/*==== WELCOME MESSAGE ====*/
+.welcome-message {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.welcome-message p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.862);
+}
+
+.welcome-p-mobile {
+  display: none;
+}
+
+/*==== ARRIVAL INFO ====*/
+.arrival-info {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 20px 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+.check-in-out,
+.wifi {
+  width: 100%;
+}
+
+.check-in-out li,
+.wifi li {
+  list-style-type: none;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.check-in-out h1,
+.wifi h1,
+.location h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.862);
+  margin-bottom: 10px;
+}
+
+.check-in-out a:hover {
+  transform: scale(1, 05);
+  transition: transform 0.3s ease;
+}
+
+.wifi {
+  margin-top: 50px;
+}
+
+.location iframe {
+  width: 300px;
+  height: 169px;
+  border-radius: 20px;
+}
+
+.check-in-out i,
+.wifi i,
+.location i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+/*==== RECOMMEDATIONS ====*/
+.recommedations-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.recommedations-container {
+  position: relative;
+}
+
+.recommedations-container img {
+  width: 100%;
+  max-width: 300px;
+  height: 168.75px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 20px;
+}
+
+.recommedations-container a {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 100%;
+}
+
+.recommedations-container p {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.351);
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  font-weight: bold;
+}
+
+.others {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 168.75px;
+  background-color: rgba(115, 157, 173, 0.417);
+  border-radius: 20px;
+}
+
+.others ul {
+  padding-left: 22px;
+}
+
+.others a {
+  text-decoration: none;
+}
+
+.others li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+  padding: 5px;
+}
+.others li:hover {
+  background-color: rgba(115, 157, 173, 0.3);
+  color: white;
+  border-radius: 20px;
+}
+
+.restaurants:hover,
+.beaches:hover,
+.attractions:hover,
+.cultural-historic-sites:hover,
+.activities:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  padding: 0;
+}
+/*==== CARTS ====*/
+.container-wrap {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.activities-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px rgba(0, 0, 1, 0.5);
+  border-radius: 30px;
+  padding: 20px 20px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 320px;
+  height: 560px !important;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px rgba(0, 0, 1, 0.5);
+  border-radius: 30px;
+  padding: 15px 15px;
+  width: 100%;
+  max-width: 300px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.cultural {
+  height: 530px;
+}
+
+.cultural h3 {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-img {
+  width: 100%;
+  max-width: 280px;
+  height: 250px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.card .info {
+  max-width: 280px;
+  height: auto;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: 0.05rem;
+  margin-bottom: 20px;
+}
+
+.map-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: auto;
+  border-radius: 30px;
+  background-color: rgba(225, 232, 229, 0.641);
+  letter-spacing: 0.07rem;
+  font-weight: 500;
+  color: rgb(55, 55, 195);
+  width: 140px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.map-link:hover {
+  background-color: rgb(42, 42, 181);
+  color: rgb(255, 252, 252);
+}
+
+.wiki-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: rgba(225, 232, 229, 0.641);
+  letter-spacing: 0.07rem;
+  font-weight: 500;
+  color: rgb(55, 55, 195);
+  width: 150px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.wiki-link:hover {
+  background-color: rgb(42, 42, 181);
+  color: rgb(255, 252, 252);
+}
+
+/*==== HOYSE RULES ====*/
+.house-rules {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 50px auto;
+}
+
+.house-rules li {
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+.house-rules p {
+  margin-top: 15px;
+}
+/*==== FOOTER ====*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.emergency-contacts,
+.transports,
+.contacts,
+.social {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.emergency-contacts h2,
+.transports h2,
+.contacts h2,
+.social h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.862);
+}
+
+.emergency-contacts li,
+.transports li,
+.contacts li {
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+.emergency-contacts i,
+.transports i,
+.contacts i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.social p {
+  position: relative;
+}
+
+.social svg {
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
