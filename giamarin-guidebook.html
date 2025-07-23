@@ -168,6 +168,30 @@
           </div>
         </div>
       </section>
+
+      <div class="weather">
+        <a
+          class="weatherwidget-io"
+          href="https://forecast7.com/en/35d1225d74/istro/"
+          data-label_1="ISTRO"
+          data-label_2="WEATHER"
+          data-theme="weather_one"
+          >ISTRO WEATHER</a
+        >
+      </div>
+
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://weatherwidget.io/js/widget.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "weatherwidget-io-js");
+      </script>
     </main>
 
     <!--FOOTER-->
@@ -193,40 +217,6 @@
           <li>
             <i class="fa-solid fa-shield-halved"></i>Police:
             <a href="tel:100">100</a>
-          </li>
-        </ul>
-      </div>
-
-      <!--Transports-->
-      <div class="transports">
-        <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
-        <ul>
-          <li>
-            <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
-              href="tel:30 697 7352782"
-            >
-              +30 697 7352782</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://www.ktelherlas.gr/en"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Timetable</a
-            >
-          </li>
-          <li>
-            <i class="fa-solid fa-bus"></i
-            ><a
-              class="link"
-              href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Bus Stop</a
-            >
           </li>
         </ul>
       </div>
@@ -341,6 +331,40 @@
             </g>
           </svg>
         </a>
+      </div>
+
+      <!--Transports-->
+      <div class="transports">
+        <h2><i class="fa-solid fa-route"></i> Local Transports</h2>
+        <ul>
+          <li>
+            <i class="fa-solid fa-taxi"></i>Taxi Contact:<a
+              href="tel:30 697 7352782"
+            >
+              +30 697 7352782</a
+            >
+          </li>
+          <li>
+            <i class="fa-solid fa-bus"></i
+            ><a
+              class="link"
+              href="https://www.ktelherlas.gr/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Bus Timetable</a
+            >
+          </li>
+          <li>
+            <i class="fa-solid fa-bus"></i
+            ><a
+              class="link"
+              href="https://maps.app.goo.gl/PH79QZawevxBASfQ6"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Bus Stop</a
+            >
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
