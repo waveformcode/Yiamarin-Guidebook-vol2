@@ -36,6 +36,11 @@ body {
   text-decoration: none;
   padding: 10px;
   border-radius: 20px;
+  color: blue;
+}
+
+.nav-bar a:visited {
+  color: blue;
 }
 
 .nav-bar li a:hover {
@@ -61,14 +66,27 @@ body {
 
 .welcome-message p {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: clamp(12px, 1.3rem, 48px);
   line-height: 1.3;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.862);
+  animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 .welcome-p-mobile {
   display: none;
+  font-size: clamp(12px, 1.3rem, 48px);
 }
 
 /*==== ARRIVAL INFO ====*/
@@ -99,7 +117,7 @@ body {
 .check-in-out h1,
 .wifi h1,
 .location h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.862);
   margin-bottom: 10px;
@@ -115,7 +133,8 @@ body {
 }
 
 .location iframe {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 169px;
   border-radius: 20px;
 }
@@ -127,6 +146,62 @@ body {
   font-size: 15px;
 }
 
+/* ========== check-in--out-instructions ========== */
+.check-in-container,
+.check-out-info {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.check-in-text p,
+.check-out-info p {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 10px 20px;
+}
+
+.check-in-text h1 {
+  padding-left: 20px;
+}
+
+.check-img {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-left: 90px;
+  border-radius: 50px;
+}
+
+.check-out-info img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 90px;
+  border-radius: 50px;
+}
+
+.check-out-info li {
+  width: 100%;
+  max-width: 600px;
+}
+
+.check-out-info ul {
+  padding: 10px 20px;
+  list-style-type: none;
+}
+
+.check-out-info a,
+.check-in-text a {
+  font-size: 1rem;
+  color: #4b71dc;
+}
 /*==== RECOMMEDATIONS ====*/
 .recommedations-grid {
   display: grid;
@@ -177,7 +252,7 @@ body {
   flex-direction: column;
   width: 300px;
   height: 168.75px;
-  background-color: rgba(115, 157, 173, 0.417);
+  background-color: rgba(115, 156, 173, 0.167);
   border-radius: 20px;
 }
 
@@ -187,17 +262,16 @@ body {
 
 .others a {
   text-decoration: none;
+  color: black;
 }
 
 .others li {
   font-size: 1rem;
   line-height: 1.5;
-  color: black;
   padding: 5px;
 }
 .others li:hover {
-  background-color: rgba(115, 157, 173, 0.8);
-  color: white;
+  background-color: rgba(214, 219, 221, 0.8);
   border-radius: 20px;
 }
 
@@ -327,7 +401,7 @@ body {
   width: 100%;
   max-width: 1000px;
   height: auto;
-  margin: 50px auto;
+  margin: 80px auto;
 }
 
 .weatherwidget-io {
@@ -386,6 +460,12 @@ footer {
   line-height: 1.5;
 }
 
+.emergency-contacts a:visited,
+.transports a:visited,
+.contacts a:visited {
+  color: blue;
+}
+
 .emergency-contacts i,
 .transports i,
 .contacts i {
@@ -402,4 +482,80 @@ footer {
   margin-top: 10px;
   left: 50%;
   transform: translate(-50%);
+}
+
+/*==== RESPONSIVE ====*/
+@media (max-width: 768px) {
+  /*==== NAV-BAR ====*/
+  .nav-bar {
+    flex-direction: column;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 100%;
+  }
+
+  .nav-bar ul {
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  /*==== WELCOME MESSAGE ====*/
+
+  /*==== WELCOME MESSAGE ====*/
+  .welcome-message {
+    display: none;
+  }
+
+  .welcome-p-mobile {
+    display: flex;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fade-in 3s;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  /*==== ARRIVAL INFO ====*/
+  .arrival-info {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .location {
+    margin-top: 40px;
+  }
+
+  .recommedations-container {
+    margin: 0 auto;
+  }
+
+  .weather {
+    flex-direction: row;
+    max-width: 500px;
+    width: 80%;
+  }
+
+  .house-rules {
+    width: 80%;
+  }
+
+  .transports,
+  .contacts,
+  .social {
+    margin-top: 20px;
+  }
 }
