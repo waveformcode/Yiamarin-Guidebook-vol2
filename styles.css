@@ -10,7 +10,7 @@ body {
 }
 
 .language-switch {
-  display: none;
+  margin-left: 20px;
 }
 /*==== NAVIGATION BAR ====*/
 .nav-bar {
@@ -20,6 +20,7 @@ body {
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .nav-bar ul {
@@ -463,6 +464,7 @@ footer {
 .social {
   height: 100px;
   margin-bottom: 50px;
+  padding-right: 20px;
 }
 
 .emergency-contacts h2,
@@ -633,18 +635,25 @@ footer {
     position: relative;
   }
 
-  .emergency-contacts li,
-  .transports li,
-  .contacts li,
-  .social li {
-  }
-
   .transports,
   .contacts,
   .social {
     margin-top: 40px;
   }
 
+  @media (max-width: 768px) {
+    .language-switch {
+      flex-direction: row;
+      position: absolute;
+      left: 10px;
+      top: 100px;
+    }
+
+    .language-switch a {
+      left: 80px;
+      bottom: 50px;
+    }
+  }
   /*
   .transports {
     order: 1;
