@@ -530,6 +530,16 @@ footer {
     overflow-x: scroll;
   }
 
+  .language-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+  }
+
+  .language-switch a {
+  }
+
   /*==== WELCOME MESSAGE MOBILE ====*/
   .welcome-message {
     display: none;
@@ -641,19 +651,6 @@ footer {
     margin-top: 40px;
   }
 
-  @media (max-width: 768px) {
-    .language-switch {
-      flex-direction: row;
-      position: absolute;
-      left: 10px;
-      top: 100px;
-    }
-
-    .language-switch a {
-      left: 80px;
-      bottom: 50px;
-    }
-  }
   /*
   .transports {
     order: 1;
