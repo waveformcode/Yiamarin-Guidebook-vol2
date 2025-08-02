@@ -111,7 +111,7 @@
       <section class="our-recommedations">
         <div class="recommedations-grid">
           <div class="recommedations-container restaurants">
-            <a href="restaurants.html">
+            <a href="Εστιατόρια.html">
               <p>Εστιατόρια</p>
               <img
                 src="images/recommedations/restaurants.jpg"
@@ -121,21 +121,21 @@
           </div>
 
           <div class="recommedations-container beaches">
-            <a href="Beaches.html">
+            <a href="Παραλιές.html">
               <p>Παραλίες</p>
               <img src="images/Beaches/voulisma.jpg" alt="Παραλίες" />
             </a>
           </div>
 
           <div class="recommedations-container attractions">
-            <a href="attractions.html">
+            <a href="Αξιοθέατα.html">
               <p>Αξιοθέατα</p>
               <img src="images/Attractions/spinaloga.jpg" alt="Αξιοθέατα" />
             </a>
           </div>
 
           <div class="recommedations-container cultural-historic-sites">
-            <a href="cultural-historic-sites.html">
+            <a href="Πολιτιστικοί_χώροι.html">
               <p>Πολιτιστικά & Ιστορικά Σημεία</p>
               <img
                 src="images/cultural sites/Archaeological Museum of Agios Nikolaos.jpg"
@@ -145,7 +145,7 @@
           </div>
 
           <div class="recommedations-container activities">
-            <a href="activities.html">
+            <a href="δραστηριοτητες.html">
               <p>Δραστηριότητες</p>
               <img src="images/activities/sarakina.jpg" alt="Δραστηριότητες" />
             </a>
@@ -167,6 +167,18 @@
           </div>
         </div>
       </section>
+
+      <!--WEATHER-->
+      <div class="weather">
+        <a
+          class="weatherwidget-io"
+          href="https://forecast7.com/en/35d1225d74/istro/"
+          data-label_1="Ίστρο "
+          data-label_2="Καίρος"
+          data-theme="weather_one"
+          >Ίστρο Καίρος</a
+        >
+      </div>
     </main>
 
     <!-- Υποσέλιδο -->
@@ -232,7 +244,7 @@
 
       <!-- Επαφές -->
       <div class="contacts">
-        <h2><i class="fa-solid fa-phone"></i>Επαφές</h2>
+        <h2><i class="fa-solid fa-phone whatsapp"></i>Επαφές</h2>
         <ul>
           <li>
             <i class="fa-solid fa-phone"></i
@@ -342,5 +354,17 @@
         </a>
       </div>
     </footer>
+    <script>
+      !(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://weatherwidget.io/js/widget.min.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      })(document, "script", "weatherwidget-io-js");
+    </script>
   </body>
 </html>
