@@ -587,7 +587,7 @@ footer {
   .weather {
     flex-direction: row;
     max-width: 500px;
-    width: 90%;
+    width: 85%;
   }
 
   /*==== HOUSE RULES MOBILE ====*/
